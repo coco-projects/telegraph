@@ -1,14 +1,16 @@
 <?php
 
+    use Coco\telegraph\Telegraph;
+
     require '../vendor/autoload.php';
 
-    \Coco\telegraph\Telegraph::setProxy('192.168.0.111', 1080);
-    \Coco\telegraph\Telegraph::setProxyEnable(true);
-    \Coco\telegraph\Telegraph::setDebug(true);
+    Telegraph::setProxy('192.168.0.111', 1080);
+    Telegraph::setProxyEnable(true);
+    Telegraph::setDebug(true);
 
-    $telegraph = new \Coco\telegraph\Telegraph();
+    $telegraph = new Telegraph();
 
-    $res = $telegraph->upload('media/test.mp4');
+    $res = $telegraph->upload('media/1.jpg');
 
     print_r($res);
 
