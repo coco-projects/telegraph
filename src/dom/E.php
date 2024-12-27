@@ -326,7 +326,7 @@ class E
     {
         $flags = $isPretty ? JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE : JSON_UNESCAPED_UNICODE;
 
-        return json_encode([self::NodeRenderToApi($contents)], $flags);
+        return json_encode(self::NodeRenderToApi($contents), $flags);
     }
 
     private static function createNode(string $tag, string|DomNode|array $text = '', array $attrs = []): DomNode
